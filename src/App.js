@@ -1,24 +1,53 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react'
 import './App.css';
+import SignIn from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
+import ResetPassword from './Pages/ResetPassword';
+import Home from './Pages/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
+
+  const [validUser, setValidUser] = useState(false)
+
+  
+  // useEffect( () => {
+  //   let user = localStorage.getItem("user")
+  //   if(typeof(user) == 'string')
+  //     setValidUser(true)
+  // },[])
+
+  const setUserValid = () => {
+    alert("ping")
+    // setValidUser(true)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/login">
+          <SignIn setUserValid={setUserValid}/>
+        </Route>
+        <Route path="/register">
+          <SignUp/>
+        </Route>
+        <Route path="/ResetPassword">
+          <ResetPassword/>
+        </Route>
+        <Route exact path="/home">
+          {/* {validUser ? <Home/> : <SignIn/>} */}
+          <Home/>
+        </Route>
+        <Route path="/">
+          {/* {validUser ? <Home/> : <SignIn/>} */}
+          <Home/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
