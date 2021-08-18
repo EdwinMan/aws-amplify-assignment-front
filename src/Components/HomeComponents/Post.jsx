@@ -94,8 +94,8 @@ export default function RecipeReviewCard(props) {
 
   const Comments = () => {
 
-    const addComment_url = "http://localhost:5000/api/v1/post/" + post._id
-    const deleteComment_url = "http://localhost:5000/api/v1/post/comment/" + post._id
+    const addComment_url = "http://18.220.118.126/api/v1/post/" + post._id
+    const deleteComment_url = "http://18.220.118.126/api/v1/post/comment/" + post._id
     
       const commentDetails = {
       author: user.firstName + " " + user.lastName,

@@ -7,7 +7,7 @@ export default function EditPost() {
 
     const user = JSON.parse(localStorage.getItem("user"));
 
-    const url = "http://localhost:5000/api/v1/post/" + user._id;
+    const url = "http://18.220.118.126/api/v1/post/" + user._id;
 
     const [posts, setPosts] = useState([]);
 
@@ -30,7 +30,7 @@ export default function EditPost() {
 
    const removePostById = (id) => {
 
-        const delete_URL = "http://localhost:5000/api/v1/post/" + id
+        const delete_URL = "http://18.220.118.126/api/v1/post/" + id
 
         axios.delete(delete_URL)
         .then( (res) => {

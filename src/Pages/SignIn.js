@@ -57,7 +57,7 @@ export default function SignIn(props) {
   const [response, setResponse] = useState("");
   const setUserValid = props.setUserValid;
 
-  const url = "http://localhost:5000/api/v1/auth/login";
+  const url = "http://18.220.118.126/api/v1/auth/login";
   
   // This function will send data to sever, and will manage the logging of the user
   const loginHandler = () => {

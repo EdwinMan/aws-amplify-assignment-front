@@ -17,7 +17,7 @@ export default function CreatePost() {
         setHidden(event.target.checked);
       };
 
-    const url = "http://localhost:5000/api/v1/post/";
+    const url = "http://18.220.118.126/api/v1/post/";
 
     const PostHandler= () => {
 

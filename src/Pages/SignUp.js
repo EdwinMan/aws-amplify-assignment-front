@@ -66,7 +66,7 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState("");
 
-  const url = "http://localhost:5000/api/v1/auth/register";
+  const url = "http://18.220.118.126/api/v1/auth/register";
 
   // This function will send data to sever, and will manage the registering of the user
   const registerHandler = () => {

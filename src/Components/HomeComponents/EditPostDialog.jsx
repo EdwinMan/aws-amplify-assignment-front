@@ -31,7 +31,7 @@ export default function DialogSelect(props) {
   const user = props.user;
   const postChangeHandler = props.postChangeHandler
 
-  const editPost_url = "http://localhost:5000/api/v1/post/" + post._id
+  const editPost_url = "http://18.220.118.126/api/v1/post/" + post._id
 
   const [text, setText] = useState()
   const [isHidden, setIsHidden] = useState()
@@ -87,7 +87,7 @@ export default function DialogSelect(props) {
         <DialogContent>
           <div style={{ textAlign:'center'}}>
               <div>
-                <TextField disabled id="outlined-basic" label="Title" defaultValue="sdsd" variant="outlined" />
+                <TextField disabled id="outlined-basic" label="Title" defaultValue={post.title} variant="outlined" />
                   <br />
                   <br />
                   <TextField
